@@ -291,6 +291,62 @@ footer img {
   border-radius: 50%;
 }
 
+/*popup styling*/
+.popup-wrap p {
+  color: #000;
+  padding-bottom: 15px;
+}
+
+.popup-wrap button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #00c564;
+  border: 2px solid #00c564;
+  font-weight: 700;
+}
+
+.popup-wrap button:hover {
+  background-color: #00c564;
+  border-color: #000;
+  color: #000;
+}
+
+.popup-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  padding: 50px 40px;
+  background: #00c564;
+}
+
+.display-popup {
+  display: block;
+}
+
+.right-popup {
+  right: 0;
+  left: unset;
+  transform: none;
+}
+
+.left-popup {
+  left: 0;
+  right: unset;
+  transform: none;
+}
+
+.center-popup {
+  top: 0;
+  left: 50%;
+}
+
+.close-popup {
+  display: none;
+}
+
 /*Media queries  */
 @media screen and (max-width: 1280px) {
   .banner-content {
