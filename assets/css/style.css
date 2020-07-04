@@ -172,6 +172,13 @@ li {
   transform: translateY(-50%);
 }
 
+#error {
+  padding-top: 5px;
+  font-size: 14px;
+  display: block;
+  color: red;
+}
+
 .submit {
   width: 100%;
   height: 100%;

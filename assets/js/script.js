@@ -2,6 +2,8 @@
 var button = document.getElementById('show-popup');
 var close = document.getElementById('close');
 var popup = document.getElementById('popup');
+var input = document.getElementById('city');
+var error = document.getElementById('error');
 
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -34,19 +36,25 @@ close.addEventListener("click", function(e){
 
 button.addEventListener("click", function(e){
 	e.preventDefault();
-	popup.classList.add('display-popup');
-	popup.classList.remove('close-popup');
-  if(isChrome || isSafari) {
-	  popup.classList.add("right-popup");    
-  } else if(isFirefox) {
-	  popup.classList.add("left-popup");    
-	} else if(isEdge) {
-	  popup.classList.add("center-bottom-popup");    
+	if(input.value.length == 0) {
+		error.innerHTML = 'This field cannot be empty';
 	} else {
-	  popup.classList.add("all-center-popup");
-	  var popupText = document.getElementById('popup-text');
-	  popupText.innerHTML = 'Browser Not Supported  :(';   
+		error.innerHTML = '';
+		popup.classList.add('display-popup');
+		popup.classList.remove('close-popup');
+	  if(isChrome || isSafari) {
+		  popup.classList.add("right-popup");    
+	  } else if(isFirefox) {
+		  popup.classList.add("left-popup");    
+		} else if(isEdge) {
+		  popup.classList.add("center-bottom-popup");    
+		} else {
+		  popup.classList.add("all-center-popup");
+		  var popupText = document.getElementById('popup-text');
+		  popupText.innerHTML = 'Browser Not Supported  :(';   
+		}	
 	}
+	
 });
 
 // Scroll to top functionality
