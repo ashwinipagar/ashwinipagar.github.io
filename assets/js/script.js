@@ -41,9 +41,9 @@ button.addEventListener("click", function(e){
   } else if(isFirefox) {
 	  popup.classList.add("left-popup");    
 	} else if(isEdge) {
-	  popup.classList.add("center-popup");    
+	  popup.classList.add("center-bottom-popup");    
 	} else {
-	  popup.classList.add("center-popup");
+	  popup.classList.add("all-center-popup");
 	  var popupText = document.getElementById('popup-text');
 	  popupText.innerHTML = 'Browser Not Supported  :(';   
 	}
