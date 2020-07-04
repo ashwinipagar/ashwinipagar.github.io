@@ -99,8 +99,119 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1440px;
+  width: 80.5%; 
   margin: 0 auto;
 }
 
+/*Banner styling start here---------*/
+.banner {
+  padding: 86px 0 49px;
+  background-color: #1f1f1f;
+}
+
+.banner .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.banner-content {
+  flex-basis: 42.6%;
+}
+
+.banner figure {
+  flex-basis: 39.6%;
+}
+
+.banner-content p {
+  color: #fff;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.form-wrap {
+  margin-top: 58px;
+}
+
+.form-wrap .text {
+  width: 80%;
+  height: 42px;
+  border: none;
+  padding: 0 19.5px;
+}
+
+.submit {
+  width: 88%;
+  padding: 36px 0;
+  margin-top: 20px;
+  font-size: 36px;
+  background-color: #00c564;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.banner-content label {
+  padding-bottom: 15px;
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+}
+
+h2 {
+  padding-bottom: 19px;
+  color: #fff;
+  font: 500 48px sans-serif;
+}
+ 
+/*Download section styling start here*/
+.download {
+  padding-bottom: 80px;
+  background: #222322;
+}
+
+.download p {
+  padding: 27px 0;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+
+.download ul {
+  display: flex;
+  justify-content: center;
+}
+
+.download span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.download li {
+  display: flex;
+  flex-basis: 32%;
+}
+
+.download li .arrow {
+  width: 60px;
+  height: 40px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.download li figure {
+  width: 18%;
+  padding-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.download li span {
+  padding-top: 25px;
+  padding-right: 3%;
+  display: inline-block;
+}
