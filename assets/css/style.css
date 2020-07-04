@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -111,17 +112,24 @@ li {
 }
 
 .banner .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .banner-content {
-  flex-basis: 42.6%;
+  -ms-flex-preferred-size: 42.6%;
+    flex-basis: 42.6%;
 }
 
 .banner figure {
-  flex-basis: 39.6%;
+  -ms-flex-preferred-size: 39.6%;
+    flex-basis: 39.6%;
 }
 
 .banner-content p {
@@ -160,15 +168,6 @@ li {
   color: #00c564;
 }
 
-/*
-.submit:after {
-  content: '';
-  background: url("../images/white-arrow.svg") no-repeat center center;
-  background-size: cover;
-  position: absolute;
-  top: 50%;
-}*/
-
 .banner-content label {
   padding-bottom: 15px;
   display: inline-block;
@@ -197,9 +196,14 @@ h2 {
 }
 
 .download ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .download span {
@@ -208,8 +212,11 @@ h2 {
 }
 
 .download li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 32%;
+  -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
 }
 
 .download li .arrow {
@@ -262,15 +269,39 @@ footer li:last-child a:after {
   display: none;
 }
 
+footer .to-the-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  right: 2%;
+  bottom: 18px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+footer .to-the-top:hover {
+  -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+footer img {
+  border-radius: 50%;
+}
+
 /*Media queries  */
 @media screen and (max-width: 1280px) {
   .banner-content {
      margin-bottom: 50px;
-     flex-basis: 100%;
+     -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 
   .banner figure {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   }
 
   .submit {
@@ -280,8 +311,11 @@ footer li:last-child a:after {
 
   .download li {
     margin-bottom: 20px;
-    flex-basis: 100%;
-    justify-content: center;
+    -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
   }
 
   .download {
@@ -303,5 +337,17 @@ footer li:last-child a:after {
     font-size: 30px;
     padding: 20px 40px;
     width: auto;
+  }
+
+  footer ul {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer .to-the-top {
+    width: 35px;
+    height: 35px;
   }
 }
